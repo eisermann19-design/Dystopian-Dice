@@ -884,5 +884,12 @@
         }
     }
 </script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(reg => console.log('Service Worker registriert'))
+      .catch(err => console.log('Service Worker Fehler', err));
+  }
+</script>
 </body>
 </html>
